@@ -27,6 +27,12 @@ class Casa:
     def getprecio(self):
         return self.precio
 
+    def setpartida(self, partida):
+        self.partida = partida
+
+    def getpartida(self):
+        return self.partida
+
     def mostrarubicacion(self):
         return self.departamento + ", " + self.provincia + ", " + self.distrito
 
@@ -34,14 +40,17 @@ casa = Casa()
 
 print("Propietario:", casa.getpropietario())
 print("Metros cuadrados:", casa.getm2())
-print("Precio:", casa.getprecio())
+print("Precio:","USD", casa.getprecio())
 print("Ubicación:", casa.mostrarubicacion())
+print("Partida:", casa.getpartida())
 
 casa.setpropietario("Danjely Saavedra")
 casa.setm2(250)
 casa.setprecio(125000)
+casa.setpartida("12345678")
 
 print("***** VENTA *****")
 print("Nuevo propietario:", casa.getpropietario())
 print("M2 del terreno actual:", casa.getm2())
-print("Precio vendido:", casa.getprecio())
+print("Precio vendido:" "USD", casa.getprecio())
+print("Nueva partida:", casa.getpartida())
